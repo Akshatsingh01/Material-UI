@@ -1,24 +1,39 @@
-import logo from './logo.svg';
-import './App.css';
+import logo from "./logo.svg";
+import "./App.css";
+import Material from "./Material";
+import { createTheme, ThemeProvider } from "@mui/material/styles";
+import { orange } from "@mui/material/colors";
+import {green, purple} from "@mui/material/colors";
+import Slider from '@mui/material/Slider';
+import Grid from "./Grid";
+
+
+
+
+
 
 function App() {
+  const theme = createTheme({
+    palette: {
+    primary: {
+      main: orange[500],
+    },
+  
+  },
+  });
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
+    <ThemeProvider theme={theme}>
+      <div className="App">
+        <div
+         
         >
-          Learn React
-        </a>
-      </header>
-    </div>
+          <Material />
+        </div>
+      </div>
+              <Slider aria-label="Volume" />
+    <Grid/>
+    </ThemeProvider>
   );
 }
 
