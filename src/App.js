@@ -5,11 +5,10 @@ import { createTheme, ThemeProvider } from "@mui/material/styles";
 import { orange } from "@mui/material/colors";
 import {green, purple} from "@mui/material/colors";
 import Slider from '@mui/material/Slider';
-import Grid from "./Grid";
-
-
-
-
+import IconLabelButtons from "./ButtonsWithIcons"
+import InputAdornments from "./InputAdornments"
+import AccessAlarmsOutlinedIcon from '@mui/icons-material/AccessAlarmsOutlined';
+import AccordionExpandIcon from "./AccordionExpandIcon"
 
 
 function App() {
@@ -24,15 +23,8 @@ function App() {
 
   return (
     <ThemeProvider theme={theme}>
-      <div className="App">
-        <div
-         
-        >
-          <Material />
-        </div>
-      </div>
-              <Slider aria-label="Volume" />
-    <Grid/>
+      <AccordionExpandIcon />
+
     </ThemeProvider>
   );
 }
